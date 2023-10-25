@@ -21,6 +21,7 @@
                 <RowDefinition Height="360"/>
                 <RowDefinition/>
             </Grid.RowDefinitions>
+            <!--窗口的第一行：上面的四个监视框，每个Border代表其中一个-->
             <UniformGrid Columns="4">
                 <Border CornerRadius="5" Background="White" Margin="10">
                     <Border.Effect>
@@ -184,6 +185,7 @@
                 </Border>
             </UniformGrid>
 
+            <!--窗口的第二行：细分为两列两行-->
             <Grid Grid.Row="1" Margin="10,0">
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition/>
@@ -200,12 +202,11 @@
                         <RowDefinition Height="40"/>
                         <RowDefinition/>
                     </Grid.RowDefinitions>
-                    <TextBlock Text="学员访问情况监控" Foreground="#3F4C5D" VerticalAlignment="Center" FontSize="15" FontWeight="Bold"
-                           />
+                    <TextBlock Text="学员访问情况监控" Foreground="#3F4C5D" VerticalAlignment="Center" FontSize="15" FontWeight="Bold"/>
                     <TextBlock HorizontalAlignment="Right" VerticalAlignment="Center" >
-                    <Hyperlink>详情</Hyperlink>
+                        <Hyperlink>详情</Hyperlink>
                     </TextBlock>
-
+                    
                     <Border CornerRadius="5" Background="White" Grid.Row="1">
                         <Border.Effect>
                             <DropShadowEffect Color="#F2F2F2" ShadowDepth="10" BlurRadius="105" Opacity="0.4" Direction="270"/>
@@ -248,7 +249,8 @@
                         </Grid>
                     </Border>
                 </Grid>
-
+                
+                <!--简介-->
                 <Grid Grid.Row="1" Margin="0,0,10,0">
                     <Grid.RowDefinitions>
                         <RowDefinition Height="40"/>
@@ -274,7 +276,8 @@
                         </Grid>
                     </Border>
                 </Grid>
-
+                
+                <!--数据监控-->
                 <Grid Grid.Column="1" Grid.RowSpan="2">
                     <Grid.RowDefinitions>
                         <RowDefinition Height="40"/>
@@ -316,19 +319,20 @@
                             </StackPanel>
 
 
-                            <zxc:Instrument Margin="0,20,0,40"
+                            <!--<zxc:Instrument Margin="0,20,0,40"
                                         PlateBackground="Orange"
                                         Value="{Binding InstrumentValue}"
                                         Minimum="-10"
                                         Maximum="90"
                                         Interval="10"
                                         ScaleTextSize="12"
-                                        ScaleBrush="White"/>
+                                        ScaleBrush="White"/>-->
                         </Grid>
                     </Border>
                 </Grid>
             </Grid>
-
+            
+            <!--窗口第三行：-->
             <Grid Margin="10,0" Grid.Row="2">
                 <Grid.RowDefinitions>
                     <RowDefinition Height="40"/>
