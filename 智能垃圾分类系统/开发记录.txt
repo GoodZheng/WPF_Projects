@@ -1,0 +1,12 @@
+1. 启动登录窗体时，光标定位到用户名输入栏
+	在文本框外部的容器中加入：
+		<Grid  FocusManager.FocusedElement="{Binding ElementName=txtUserName}">
+			<TextBox x:Name="txtUserName" Text="{Binding LoginModel.UserName}" Foreground="#555" FontSize="15" 
+                         Style="{DynamicResource UserNameTextBoxStyle}" Height="40"/>
+		<Grid>
+2. 窗口放大：
+	设置窗体的ResizeMode属性
+
+框实现回车登录操作：
+	
+	
